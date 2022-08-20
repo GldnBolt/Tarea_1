@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.tarea_1.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="1612.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea_1.HelloController">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Upload File " />
+      <TableView layoutX="14.0" layoutY="50.0" prefHeight="545.0" prefWidth="1587.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Carné" />
+          <TableColumn prefWidth="120.0" text="Nombre completo " />
+            <TableColumn prefWidth="75.0" text="Correo" />
+            <TableColumn prefWidth="86.0" text="Telefono" />
+            <TableColumn prefWidth="89.0" text="Nickname" />
+            <TableColumn prefWidth="121.0" text="Tipo de Estudiante" />
+            <TableColumn prefWidth="72.0" text="Examenes" />
+            <TableColumn prefWidth="50.0" text="Quices" />
+            <TableColumn prefWidth="57.0" text="Tareas" />
+            <TableColumn prefWidth="78.0" text="Proyecto 1" />
+            <TableColumn prefWidth="85.0" text="Proyecto 2" />
+            <TableColumn prefWidth="83.0" text="Proyecto 3" />
+            <TableColumn prefWidth="122.0" text="Promedio proyecto" />
+            <TableColumn prefWidth="136.0" text="Promedio Examenes" />
+            <TableColumn prefWidth="116.0" text="Promedio Quices" />
+            <TableColumn prefWidth="124.0" text="Promedio Tareas" />
+            <TableColumn prefWidth="97.0" text="Nota Final" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
