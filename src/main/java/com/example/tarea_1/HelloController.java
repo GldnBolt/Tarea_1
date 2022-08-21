@@ -10,9 +10,52 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class HelloController {
+    @FXML
+    private TableColumn<?, ?> carne;
+    @FXML
+    private TableColumn<?, ?> email;
+    @FXML
+    private TableColumn<?, ?> exams;
+    @FXML
+    private TableColumn<?, ?> examsP;
+    @FXML
+    private TableColumn<?, ?> finalgrade;
+    @FXML
+    private TableColumn<?, ?> homeworks;
+    @FXML
+    private TableColumn<?, ?> homeworksP;
+    @FXML
+    private TableColumn<?, ?> name;
+    @FXML
+    private TableColumn<?, ?> nickname;
+    @FXML
+    private TableColumn<?, ?> p1;
+    @FXML
+    private TableColumn<?, ?> p2;
+    @FXML
+    private TableColumn<?, ?> p3;
+    @FXML
+    private TableColumn<?, ?> phone;
+    @FXML
+    private TableColumn<?, ?> proyectP;
+    @FXML
+    private TableColumn<?, ?> quices;
+    @FXML
+    private TableColumn<?, ?> quicesP;
+    @FXML
+    private TableColumn<?, ?> student_type;
+    @FXML
+    private TableView<?> table;
+    @FXML
+    void onHelloButtonClick(ActionEvent event) {
 
+    }
     private BufferedReader bufferedReader;
     private LinkedList linkedList;
 
