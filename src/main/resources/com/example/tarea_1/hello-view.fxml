@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="1612.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea_1.HelloController">
    <children>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Upload File " />
@@ -23,7 +22,7 @@
             <TableColumn fx:id="p1" prefWidth="78.0" text="Proyecto 1" />
             <TableColumn fx:id="p2" prefWidth="85.0" text="Proyecto 2" />
             <TableColumn fx:id="p3" prefWidth="83.0" text="Proyecto 3" />
-            <TableColumn fx:id="proyectP" prefWidth="122.0" text="Promedio proyecto" />
+            <TableColumn fx:id="projectP" prefWidth="122.0" text="Promedio proyecto" />
             <TableColumn fx:id="examsP" prefWidth="136.0" text="Promedio Examenes" />
             <TableColumn fx:id="quicesP" prefWidth="116.0" text="Promedio Quices" />
             <TableColumn fx:id="homeworksP" prefWidth="124.0" text="Promedio Tareas" />

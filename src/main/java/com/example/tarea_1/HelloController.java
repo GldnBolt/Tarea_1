@@ -1,61 +1,68 @@
 package com.example.tarea_1;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class HelloController {
+public class HelloController implements Initializable {
     @FXML
-    private TableColumn<?, ?> carne;
+    private TableColumn<Student, Integer> carne;
     @FXML
-    private TableColumn<?, ?> email;
+    private TableColumn<Student, String> email;
     @FXML
-    private TableColumn<?, ?> exams;
+    private TableColumn<Student, Integer> exams;
     @FXML
-    private TableColumn<?, ?> examsP;
+    private TableColumn<Student, Integer> examsP;
     @FXML
-    private TableColumn<?, ?> finalgrade;
+    private TableColumn<Student, Integer> finalgrade;
     @FXML
-    private TableColumn<?, ?> homeworks;
+    private TableColumn<Student, Integer> homeworks;
     @FXML
-    private TableColumn<?, ?> homeworksP;
+    private TableColumn<Student, Integer> homeworksP;
     @FXML
-    private TableColumn<?, ?> name;
+    private TableColumn<Student, String> name;
     @FXML
-    private TableColumn<?, ?> nickname;
+    private TableColumn<Student, String> nickname;
     @FXML
-    private TableColumn<?, ?> p1;
+    private TableColumn<Student, Integer> p1;
     @FXML
-    private TableColumn<?, ?> p2;
+    private TableColumn<Student, Integer> p2;
     @FXML
-    private TableColumn<?, ?> p3;
+    private TableColumn<Student, Integer> p3;
     @FXML
-    private TableColumn<?, ?> phone;
+    private TableColumn<Student, Integer> phone;
     @FXML
-    private TableColumn<?, ?> proyectP;
+    private TableColumn<Student, Integer> projectP;
     @FXML
-    private TableColumn<?, ?> quices;
+    private TableColumn<Student, Integer> quices;
     @FXML
-    private TableColumn<?, ?> quicesP;
+    private TableColumn<Student, Integer> quicesP;
     @FXML
-    private TableColumn<?, ?> student_type;
+    private TableColumn<Student, String> student_type;
     @FXML
-    private TableView<?> table;
-    @FXML
-    void onHelloButtonClick(ActionEvent event) {
+    private TableView<Student> table;
 
-    }
+    ObservableList<Student> list = FXCollections.observableArrayList(
+            new Student()
+    );
     private BufferedReader bufferedReader;
     private LinkedList linkedList;
 
@@ -86,5 +93,25 @@ public class HelloController {
 
     }
 
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        name.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
+        student_type.setCellValueFactory(new PropertyValueFactory<Student, String>("student_type"));
+        nickname.setCellValueFactory(new PropertyValueFactory<Student, String>("nickname"));
+        email.setCellValueFactory(new PropertyValueFactory<Student, String>("email"));
+        exams.setCellValueFactory(new PropertyValueFactory<Student, Integer>("exams"));
+        examsP.setCellValueFactory(new PropertyValueFactory<Student, Integer>("examsP"));
+        finalgrade.setCellValueFactory(new PropertyValueFactory<Student, Integer>("finalgrade"));
+        homeworks.setCellValueFactory(new PropertyValueFactory<Student, Integer>("homeworks"));
+        homeworksP.setCellValueFactory(new PropertyValueFactory<Student, Integer>("homeworksP"));
+        quices.setCellValueFactory(new PropertyValueFactory<Student, Integer>("quices"));
+        quicesP.setCellValueFactory(new PropertyValueFactory<Student, Integer>("quicesP"));
+        p1.setCellValueFactory(new PropertyValueFactory<Student, Integer>("p1"));
+        p2.setCellValueFactory(new PropertyValueFactory<Student, Integer>("p2"));
+        p3.setCellValueFactory(new PropertyValueFactory<Student, Integer>("p3"));
+        phone.setCellValueFactory(new PropertyValueFactory<Student, Integer>("phone"));
+        projectP.setCellValueFactory(new PropertyValueFactory<Student, Integer>("projectP"));
     }
 }
