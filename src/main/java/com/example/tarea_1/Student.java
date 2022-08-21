@@ -2,24 +2,24 @@ package com.example.tarea_1;
 
 public class Student {
     private String name;
-    private int carne;
+    private String carne;
     private String email;
-    private int exams;
-    private int examsP;
-    private int finalgrade;
-    private int homeworks;
-    private int homeworksP;
+    private String exams;
+    private String examsP;
+    private String finalgrade;
+    private String homeworks;
+    private String homeworksP;
     private String nickname;
-    private int p1;
-    private int p2;
-    private int p3;
-    private int phone;
-    private int projectP;
-    private int quices;
-    private int quicesP;
+    private String p1;
+    private String p2;
+    private String p3;
+    private String phone;
+    private String projectP;
+    private String quices;
+    private String quicesP;
     private String student_type;
 
-    public Student(String name, int carne, String email, int exams, int examsP, int finalgrade, int homeworks, int homeworksP, String nickname, int p1, int p2, int p3, int phone, int proyectP, int quices, int quicesP, String student_type) {
+    public Student(String name, String carne, String email, String exams, String examsP, String finalgrade, String homeworks, String homeworksP, String nickname, String p1, String p2, String p3, String phone, String projectP, String quices, String quicesP, String student_type) {
         this.name = name;
         this.carne = carne;
         this.email = email;
@@ -43,7 +43,7 @@ public class Student {
         return name;
     }
 
-    public int getCarne() {
+    public String getCarne() {
         return carne;
     }
 
@@ -51,23 +51,23 @@ public class Student {
         return email;
     }
 
-    public int getExams() {
+    public String getExams() {
         return exams;
     }
 
-    public int getExamsP() {
+    public String getExamsP() {
         return examsP;
     }
 
-    public int getFinalgrade() {
+    public String getFinalgrade() {
         return finalgrade;
     }
 
-    public int getHomeworks() {
+    public String getHomeworks() {
         return homeworks;
     }
 
-    public int getHomeworksP() {
+    public String getHomeworksP() {
         return homeworksP;
     }
 
@@ -75,31 +75,31 @@ public class Student {
         return nickname;
     }
 
-    public int getP1() {
+    public String getP1() {
         return p1;
     }
 
-    public int getP2() {
+    public String getP2() {
         return p2;
     }
 
-    public int getP3() {
+    public String getP3() {
         return p3;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public int getProjectP() {
+    public String getProjectP() {
         return projectP;
     }
 
-    public int getQuices() {
+    public String getQuices() {
         return quices;
     }
 
-    public int getQuicesP() {
+    public String getQuicesP() {
         return quicesP;
     }
 
