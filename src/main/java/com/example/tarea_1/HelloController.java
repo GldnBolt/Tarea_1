@@ -60,9 +60,7 @@ public class HelloController implements Initializable {
     @FXML
     private TableView<Student> table;
 
-    ObservableList<Student> list = FXCollections.observableArrayList(
-            new Student()
-    );
+
     private BufferedReader bufferedReader;
     private LinkedList linkedList;
 
@@ -85,7 +83,7 @@ public class HelloController implements Initializable {
 
             }
         }
-        System.out.println(Datos);
+
     }
 
     catch (IOException ioException) {
@@ -93,6 +91,11 @@ public class HelloController implements Initializable {
 
     }
 
+        ObservableList<Student> list = FXCollections.observableArrayList(
+                new Student(Datos[0], Datos[1], Datos[2], Datos[3], Datos[4], Datos[5],Datos[6],Datos[7]),
+                new Student("Andres",2022108841, "abc",100),
+                new Student("Andres",2022108841, "abc",100)
+        );
     }
 
     @Override
@@ -113,5 +116,8 @@ public class HelloController implements Initializable {
         p3.setCellValueFactory(new PropertyValueFactory<Student, Integer>("p3"));
         phone.setCellValueFactory(new PropertyValueFactory<Student, Integer>("phone"));
         projectP.setCellValueFactory(new PropertyValueFactory<Student, Integer>("projectP"));
+        carne.setCellValueFactory(new PropertyValueFactory<Student, Integer>("carne"));
+
+        table.setItems(list);
     }
 }
