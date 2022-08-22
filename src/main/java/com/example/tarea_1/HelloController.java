@@ -88,9 +88,7 @@ public class HelloController implements Initializable {
         ioException.printStackTrace();
 
     }
-    projectP = (Datos.get(p1)+Datos.get(p2)+Datos.get(p3))/3;
-    allP = (Datos.get(exams)+Datos.get(quices)+Datos.get(homeworks))/3;
-    finalgrade = ();
+
 
     for (int j = 0; j < Datos.size(); j++){
         list.add(new Student(
@@ -105,10 +103,7 @@ public class HelloController implements Initializable {
                 Datos.get(8),
                 Datos.get(9),
                 Datos.get(10),
-                Datos.get(11),
-                projectP,
-                allP,
-                finalgrade));
+                Datos.get(11));
     }
     table.refresh();
     }
