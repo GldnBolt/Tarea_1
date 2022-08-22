@@ -30,10 +30,7 @@ public class Student {
                    String homeworks,
                    String p1,
                    String p2,
-                   String p3,
-                   String projectP,
-                   String allP,
-                   String finalgrade) {
+                   String p3) {
         this.carne = carne;
         this.name = name;
         this.email = email;

@@ -101,10 +101,7 @@ public class HelloController implements Initializable {
                 Datos.get(8),
                 Datos.get(9),
                 Datos.get(10),
-                Datos.get(11),
-                projectP,
-                allP,
-                finalgrade));
+                Datos.get(11)));
     }
     table.refresh();
     }
