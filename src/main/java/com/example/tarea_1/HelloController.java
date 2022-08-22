@@ -51,8 +51,6 @@ public class HelloController implements Initializable {
     @FXML
     private TableColumn<Student, String> finalgrade;
 
-
-
     @FXML
     private TableView<Student> table;
 
@@ -103,7 +101,10 @@ public class HelloController implements Initializable {
                 Datos.get(8),
                 Datos.get(9),
                 Datos.get(10),
-                Datos.get(11));
+                Datos.get(11),
+                projectP,
+                allP,
+                finalgrade));
     }
     table.refresh();
     }
@@ -124,6 +125,7 @@ public class HelloController implements Initializable {
         projectP.setCellValueFactory(new PropertyValueFactory<Student, String>("projectP"));
         allP.setCellValueFactory(new PropertyValueFactory<Student, String>("allP"));
         finalgrade.setCellValueFactory(new PropertyValueFactory<Student, String>("finalgrade"));
+
         table.setItems(list);
     }
 }

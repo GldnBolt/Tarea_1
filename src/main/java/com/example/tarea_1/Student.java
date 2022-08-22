@@ -46,9 +46,8 @@ public class Student {
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
-        this.projectP = projectP;
-        this.allP = allP;
-        this.finalgrade = finalgrade;
+
+
         int pro1 = Integer.parseInt(p1);
         int pro2 = Integer.parseInt(p2);
         int pro3 = Integer.parseInt(p3);
@@ -59,12 +58,18 @@ public class Student {
         int promedio_EQT;
         promedio_EQT = (examsI + quicesI + homeworksI)/3;
         String S_p_EQT = String.valueOf(promedio_EQT);
-        int promedio_proj;
-        promedio_proj = (p1+p2+p3)/3;
-        String S_p_proj = String.valueOf(promedio_proj);
-        int finalgrade;
-        finalgrade = (promedio_proj+promedio_EQT)/2;
-        String finalgrade = String.valueOf(finalgrade)
+
+        int promedio_proy;
+        promedio_proy = (pro1 + pro2 + pro3)/3;
+        String S_p_proj = String.valueOf(promedio_proy);
+
+        int grade;
+        grade = (promedio_proy+promedio_EQT)/2;
+        String notafinal = String.valueOf(grade);
+
+        this.projectP = S_p_proj;
+        this.allP = S_p_EQT;
+        this.finalgrade = notafinal;
     }
 
 
