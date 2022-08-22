@@ -23,21 +23,21 @@ public class HelloController implements Initializable {
     @FXML
     private TableColumn<Student, String> carne;
     @FXML
+    private TableColumn<Student, String> name;
+    @FXML
     private TableColumn<Student, String> email;
+    @FXML
+    private TableColumn<Student, String> phone;
+    @FXML
+    private TableColumn<Student, String> nickname;
+    @FXML
+    private TableColumn<Student, String> student_type;
     @FXML
     private TableColumn<Student, String> exams;
     @FXML
-    private TableColumn<Student, String> examsP;
-    @FXML
-    private TableColumn<Student, String> finalgrade;
+    private TableColumn<Student, String> quices;
     @FXML
     private TableColumn<Student, String> homeworks;
-    @FXML
-    private TableColumn<Student, String> homeworksP;
-    @FXML
-    private TableColumn<Student, String> name;
-    @FXML
-    private TableColumn<Student, String> nickname;
     @FXML
     private TableColumn<Student, String> p1;
     @FXML
@@ -45,22 +45,21 @@ public class HelloController implements Initializable {
     @FXML
     private TableColumn<Student, String> p3;
     @FXML
-    private TableColumn<Student, String> phone;
-    @FXML
     private TableColumn<Student, String> projectP;
     @FXML
-    private TableColumn<Student, String> quices;
+    private TableColumn<Student, String> allP;
     @FXML
-    private TableColumn<Student, String> quicesP;
-    @FXML
-    private TableColumn<Student, String> student_type;
+    private TableColumn<Student, String> finalgrade;
+
+
+
     @FXML
     private TableView<Student> table;
 
 
     private BufferedReader bufferedReader;
     private LinkedList linkedList;
-
+    ObservableList<Student> list = FXCollections.observableArrayList();
     @FXML
     public void onHelloButtonClick()
     {
@@ -89,33 +88,47 @@ public class HelloController implements Initializable {
         ioException.printStackTrace();
 
     }
+    projectP = (Datos.get(p1)+Datos.get(p2)+Datos.get(p3))/3;
+    allP = (Datos.get(exams)+Datos.get(quices)+Datos.get(homeworks))/3;
+    finalgrade = ();
 
-        ObservableList<Student> list = FXCollections.observableArrayList(
-                new Student(Datos.get(0), Datos.get(1), Datos.get(2), Datos.get(3), Datos.get(4), Datos.get(5), Datos.get(6), Datos.get(7), Datos.get(8), Datos.get(9), Datos.get(10), Datos.get(11), Datos.get(12), Datos.get(13), Datos.get(14), Datos.get(15), Datos.get(16))
-        );
+    for (int j = 0; j < Datos.size(); j++){
+        list.add(new Student(
+                Datos.get(0),
+                Datos.get(1),
+                Datos.get(2),
+                Datos.get(3),
+                Datos.get(4),
+                Datos.get(5),
+                Datos.get(6),
+                Datos.get(7),
+                Datos.get(8),
+                Datos.get(9),
+                Datos.get(10),
+                Datos.get(11),
+                projectP,
+                allP,
+                finalgrade));
+    }
     table.refresh();
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        carne.setCellValueFactory(new PropertyValueFactory<Student, String>("carne"));
         name.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
-        student_type.setCellValueFactory(new PropertyValueFactory<Student, String>("student_type"));
-        nickname.setCellValueFactory(new PropertyValueFactory<Student, String>("nickname"));
         email.setCellValueFactory(new PropertyValueFactory<Student, String>("email"));
+        phone.setCellValueFactory(new PropertyValueFactory<Student, String>("phone"));
+        nickname.setCellValueFactory(new PropertyValueFactory<Student, String>("nickname"));
+        student_type.setCellValueFactory(new PropertyValueFactory<Student, String>("student_type"));
         exams.setCellValueFactory(new PropertyValueFactory<Student, String>("exams"));
-        examsP.setCellValueFactory(new PropertyValueFactory<Student, String>("examsP"));
-        finalgrade.setCellValueFactory(new PropertyValueFactory<Student, String>("finalgrade"));
-        homeworks.setCellValueFactory(new PropertyValueFactory<Student, String>("homeworks"));
-        homeworksP.setCellValueFactory(new PropertyValueFactory<Student, String>("homeworksP"));
         quices.setCellValueFactory(new PropertyValueFactory<Student, String>("quices"));
-        quicesP.setCellValueFactory(new PropertyValueFactory<Student, String>("quicesP"));
+        homeworks.setCellValueFactory(new PropertyValueFactory<Student, String>("homeworks"));
         p1.setCellValueFactory(new PropertyValueFactory<Student, String>("p1"));
         p2.setCellValueFactory(new PropertyValueFactory<Student, String>("p2"));
         p3.setCellValueFactory(new PropertyValueFactory<Student, String>("p3"));
-        phone.setCellValueFactory(new PropertyValueFactory<Student, String>("phone"));
         projectP.setCellValueFactory(new PropertyValueFactory<Student, String>("projectP"));
-        carne.setCellValueFactory(new PropertyValueFactory<Student, String>("carne"));
-
-        table.setItems(List);
+        allP.setCellValueFactory(new PropertyValueFactory<Student, String>("allP"));
+        finalgrade.setCellValueFactory(new PropertyValueFactory<Student, String>("finalgrade"));
+        table.setItems(list);
     }
 }
