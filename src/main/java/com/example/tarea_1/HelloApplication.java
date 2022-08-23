@@ -15,7 +15,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     /**
      * Crea el stage en donde se mostraran todos los datos y la tabla.
-     * @param stage
+     * @param stage Es el escenario en donde se muestra todo
      * @throws IOException
      */
     @Override
@@ -29,7 +29,7 @@ public class HelloApplication extends Application {
 
     /**
      * Hace el inicio del programa
-     * @param args
+     * @param args son los argumentos que se le mandan al programa, en realidad no es practicamente nada
      */
     public static void main(String[] args) {
         launch();
