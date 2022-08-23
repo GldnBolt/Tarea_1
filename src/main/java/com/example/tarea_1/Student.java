@@ -1,5 +1,8 @@
 package com.example.tarea_1;
 
+/**
+ * Genera las variables que estan enlazadas a la clase Student
+ */
 public class Student {
     private String carne;
     private String name;
@@ -18,7 +21,21 @@ public class Student {
     private String finalgrade;
 
 
-
+    /**
+     * Son los datos que pertenecen a Student
+     * @param carne
+     * @param name
+     * @param email
+     * @param phone
+     * @param nickname
+     * @param student_type
+     * @param exams
+     * @param quices
+     * @param homeworks
+     * @param p1
+     * @param p2
+     * @param p3
+     */
     public Student(String carne,
                    String name,
                    String email,
@@ -70,9 +87,10 @@ public class Student {
     }
 
 
-
-
-
+    /**
+     * Son los returns de la clase Student.
+     * @return
+     */
     public String getCarne() {return carne;}
     public String getName() {return name;}
     public String getEmail() {return email;}

@@ -19,6 +19,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+/**
+ * Genera los nombres y codigos de cada columna para poner controlarla.
+ * @author Andres Blanco Coto
+ */
 public class HelloController implements Initializable {
     @FXML
     private TableColumn<Student, String> carne;
@@ -58,6 +62,10 @@ public class HelloController implements Initializable {
     private BufferedReader bufferedReader;
     private LinkedList linkedList;
     ObservableList<Student> list = FXCollections.observableArrayList();
+
+    /**
+     * Abre el boton y ejecuta el lector del archivo para poder seleccionar los datos
+     */
     @FXML
     public void onHelloButtonClick()
     {
@@ -105,6 +113,13 @@ public class HelloController implements Initializable {
     }
     table.refresh();
     }
+
+    /**
+     * Enlaza todos los datos de las tablas y los agrega.
+     * @param url
+     * @param resourceBundle
+     * \
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         carne.setCellValueFactory(new PropertyValueFactory<Student, String>("carne"));
