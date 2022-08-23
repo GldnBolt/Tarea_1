@@ -12,7 +12,7 @@ import java.io.IOException;
  * la herencia
  * @author Andres Blanco Coto
  */
-public class HelloApplication extends Application {
+public class main extends Application {
     /**
      * Crea el stage en donde se mostraran todos los datos y la tabla.
      * @param stage Es el escenario en donde se muestra todo
@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(main.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1620, 620);
         stage.setTitle("Tarea 1 Andres Blanco");
         stage.setScene(scene);
